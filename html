@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>十一中学精神卫生中心 | 精神病收容控制中心</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#3B82F6', // 理性蓝
+                        secondary: '#F97316', // 治愈橙
+                        dark: '#0F172A', // 深空黑
+                        light: '#E2E8F0', // 雾灰
+                    },
+                    fontFamily: {
+                        inter: ['Inter', 'system-ui', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .text-shadow {
+                text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            }
+            .bg-gradient-abstract {
+                background: radial-gradient(circle at 10% 20%, rgba(59, 130, 246, 0.8) 0%, rgba(15, 23, 42, 0.95) 90%);
+            }
+            .clip-path-slant {
+                clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+            }
+            .animate-float {
+                animation: float 6s ease-in-out infinite;
+            }
+            @keyframes float {
+                0% { transform: translateY(0px); }
+                50% { transform: translateY(-20px); }
+                100% { transform: translateY(0px); }
+            }
+        }
+    </style>
+</head>
+<body class="font-inter bg-dark text-light overflow-x-hidden">
+    <!-- 导航栏 -->
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 ease-in-out">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <i class="fa fa-connectdevelop text-primary text-3xl animate-float"></i>
+                <span class="text-2xl font-bold text-white">十一中心</span>
+            </div>
+            <div class="hidden md:flex space-x-8">
+                <a href="#about" class="text-white hover:text-primary transition-colors">关于中心</a>
+                <a href="#disorders" class="text-white hover:text-primary transition-colors">心灵解析</a>
+                <a href="#services" class="text-white hover:text-primary transition-colors">援助服务</a>
+                <a href="#stories" class="text-white hover:text-primary transition-colors">治愈故事</a>
+            </div>
+            <button class="md:hidden text-white text-2xl">
+                <i class="fa fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- 英雄区 -->
+    <header class="relative min-h-screen flex items-center justify-center bg-gradient-abstract clip-path-slant">
+        <div class="absolute inset-0 overflow-hidden">
+            <div class="absolute -top-24 -right-24 w-96 h-96 bg-primary/20 rounded-full blur-3xl"></div>
+            <div class="absolute top-1/2 -left-24 w-64 h-64 bg-secondary/10 rounded-full blur-3xl"></div>
+        </div>
+        <div class="container mx-auto px-4 z-10 text-center">
+            <h1 class="text-[clamp(2.5rem,8vw,5rem)] font-bold text-white mb-6 text-shadow animate-float">
+                十一中学<br><span class="text-primary">精神卫生中心</span>
+            </h1>
+            <p class="text-[clamp(1rem,3vw,1.5rem)] text-light/80 max-w-3xl mx-auto mb-10">
+                探索心灵的隐秘角落，为青春期的每一次波动，提供理性的锚点与温暖的港湾。
+            </p>
+            <a href="#disorders" class="inline-block bg-primary hover:bg-primary/80 text-white font-semibold px-8 py-3 rounded-full transition-all transform hover:scale-105">
+                探索心灵地图 <i class="fa fa-arrow-right ml-2"></i>
+            </a>
+        </div>
+        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
+            <i class="fa fa-angle-down text-white text-3xl"></i>
+        </div>
+    </header>
+
+    <!-- 关于中心 -->
+    <section id="about" class="py-20 bg-dark">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center gap-10">
+                <div class="md:w-1/2">
+                    <h2 class="text-[clamp(1.8rem,5vw,3rem)] font-bold text-white mb-6">我们的理念</h2>
+                    <p class="text-light/80 mb-6 leading-relaxed">
+                        在十一中学精神卫生中心，我们相信每一次情绪的起伏都是生命真实的回响。我们不只是处理症状，更是陪伴青少年构建心理的韧性。
+                    </p>
+                    <p class="text-light/80 mb-6 leading-relaxed">
+                        我们将抽象的心理概念具象化，将复杂的精神疾病解构为易懂的语言，致力于打破偏见，还原心理健康的本来面目。
+                    </p>
+                    <div class="flex space-x-4 mt-8">
+                        <div class="w-12 h-12 bg-primary/20 rounded-full flex items-center justify-center">
+                            <i class="fa fa-brain text-primary text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-white font-semibold">专业认知</h3>
+                            <p class="text-light/60 text-sm">基于循证医学的解读</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="md:w-1/2 relative">
+                    <div class="w-full h-80 md:h-96 bg-dark/50 rounded-2xl border border-primary/30 overflow-hidden relative">
+                        <img src="https://picsum.photos/id/1048/800/600" alt="心理咨询室" class="w-full h-full object-cover opacity-70">
+                        <div class="absolute inset-0 bg-gradient-to-t from-dark to-transparent"></div>
+                        <div class="absolute bottom-0 left-0 p-6">
+                            <p class="text-white font-semibold text-shadow">安全空间，自由表达</p>
+                        </div>
+                    </div>
+                    <div class="absolute -bottom-5 -right-5 w-24 h-24 bg-secondary rounded-full flex items-center justify-center text-white font-bold text-xl animate-float">
+                        100%
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 心灵解析区 - 抽象化疾病介绍 -->
+    <section id="disorders" class="py-20 bg-dark/80 relative">
+        <div class="absolute top-0 left-0 w-full h-32 bg-gradient-to-b from-dark to-transparent"></div>
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-[clamp(1.8rem,5vw,3rem)] font-bold text-white mb-4">心灵解析图谱</h2>
+                <p class="text-light/60 max-w-2xl mx-auto">每一种心理状态，都是心灵的独特信号。以下是常见青少年心理议题的抽象解读。</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- 焦虑症 -->
+                <div class="bg-dark/50 border border-primary/20 rounded-2xl p-6 hover:border-primary/60 transition-all transform hover:-translate-y-2">
+                    <div class="w-14 h-14 bg-primary/20 rounded-full flex items-center justify-center mb-6">
+                        <i class="fa fa-exclamation-triangle text-primary text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-3">焦虑症</h3>
+                    <p class="text-light/70 mb-4">
+                        如同心灵的过度敏感系统，将未来的威胁无限放大。表现为持续的紧张、恐惧与躯体化反应。
+                    </p>
+                    <div class="mt-6">
+                        <h4 class="text-white font-semibold mb-2">抽象隐喻</h4>
+                        <div class="flex space-x-2 text-sm">
+                            <span class="bg-primary/20 text-primary px-3 py-1 rounded-full">持续的警报</span>
+                            <span class="bg-secondary/20 text-secondary px-3 py-1 rounded-full">失控的思绪</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 抑郁症 -->
+                <div class="bg-dark/50 border border-primary/20 rounded-2xl p-6 hover:border-primary/60 transition-all transform hover:-translate-y-2">
+                    <div class="w-14 h-14 bg-primary/20 rounded-full flex items-center justify-center mb-6">
+                        <i class="fa fa-cloud text-primary text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-3">抑郁症</h3>
+                    <p class="text-light/70 mb-4">
+                        心灵进入了持久的阴天，多巴胺分泌减少。丧失兴趣与动力，感受快乐的能力暂时缺失。
+                    </p>
+                    <div class="mt-6">
+                        <h4 class="text-white font-semibold mb-2">抽象隐喻</h4>
+                        <div class="flex space-x-2 text-sm">
+                            <span class="bg-primary/20 text-primary px-3 py-1 rounded-full">情绪的阴天</span>
+                            <span class="bg-secondary/20 text-secondary px-3 py-1 rounded-full">能量枯竭</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 强迫症 -->
+                <div class="bg-dark/50 border border-primary/20 rounded-2xl p-6 hover:border-primary/60 transition-all transform hover:-translate-y-2">
+                    <div class="w-14 h-14 bg-primary/20 rounded-full flex items-center justify-center mb-6">
+                        <i class="fa fa-refresh text-primary text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-3">强迫症</h3>
+                    <p class="text-light/70 mb-4">
+                        闯入性思维与强迫行为的循环。心灵被特定的念头和仪式困住，无法停止重复的动作或思考。
+                    </p>
+                    <div class="mt-6">
+                        <h4 class="text-white font-semibold mb-2">抽象隐喻</h4>
+                        <div class="flex space-x-2 text-sm">
+                            <span class="bg-primary/20 text-primary px-3 py-1 rounded-full">无限循环</span>
+                            <span class="bg-secondary/20 text-secondary px-3 py-1 rounded-full">无法摆脱的脚本</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 创伤后应激 -->
+                <div class="bg-dark/50 border border-primary/20 rounded-2xl p-6 hover:border-primary/60 transition-all transform hover:-translate-y-2">
+                    <div class="w-14 h-14 bg-primary/20 rounded-full flex items-center justify-center mb-6">
+                        <i class="fa fa-bolt text-primary text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-3">创伤后应激</h3>
+                    <p class="text-light/70 mb-4">
+                        过去的创伤在当下反复闪回。心灵无法区分过去与现在，时刻处于创伤场景的重演中。
+                    </p>
+                    <div class="mt-6">
+                        <h4 class="text-white font-semibold mb-2">抽象隐喻</h4>
+                        <div class="flex space-x-2 text-sm">
+                            <span class="bg-primary/20 text-primary px-3 py-1 rounded-full">记忆的碎片</span>
+                            <span class="bg-secondary/20 text-secondary px-3 py-1 rounded-full">无法关闭的回放</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 性别认知障碍 -->
+                <div class="bg-dark/50 border border-primary/20 rounded-2xl p-6 hover:border-primary/60 transition-all transform hover:-translate-y-2">
+                    <div class="w-14 h-14 bg-primary/20 rounded-full flex items-center justify-center mb-6">
+                        <i class="fa fa-cutlery text-primary text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-3">性别认知障碍</h3>
+                    <p class="text-light/70 mb-4">
+                    暂无
+                    </p>
+                    <div class="mt-6">
+                        <h4 class="text-white font-semibold mb-2">抽象隐喻</h4>
+                        <div class="flex space-x-2 text-sm">
+                            <span class="bg-primary/20 text-primary px-3 py-1 rounded-full">镜像的谎言</span>
+                            <span class="bg-secondary/20 text-secondary px-3 py-1 rounded-full"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 注意力缺陷 -->
+                <div class="bg-dark/50 border border-primary/20 rounded-2xl p-6 hover:border-primary/60 transition-all transform hover:-translate-y-2">
+                    <div class="w-14 h-14 bg-primary/20 rounded-full flex items-center justify-center mb-6">
+                        <i class="fa fa-random text-primary text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-3">注意力缺陷</h3>
+                    <p class="text-light/70 mb-4">
+                        大脑的执行功能存在“信号延迟”。难以维持专注、抑制冲动，思维在不同话题间跳跃。
+                    </p>
+                    <div class="mt-6">
+                        <h4 class="text-white font-semibold mb-2">抽象隐喻</h4>
+                        <div class="flex space-x-2 text-sm">
+                            <span class="bg-primary/20 text-primary px-3 py-1 rounded-full">散乱的光束</span>
+                            <span class="bg-secondary/20 text-secondary px-3 py-1 rounded-full">超速的思绪</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 援助服务 -->
+    <section id="services" class="py-20 bg-dark clip-path-slant relative">
+        <div class="absolute inset-0 bg-primary/5 pointer-events-none"></div>
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="text-center mb-16">
+                <h2 class="text-[clamp(1.8rem,5vw,3rem)] font-bold text-white mb-4">援助与支持</h2>
+                <p class="text-light/60 max-w-2xl mx-auto">请拨打全国统一的24小时心理援助热线电话 12356</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                <div class="bg-dark/80 border border-primary/20 rounded-2xl p-8 relative overflow-hidden group">
