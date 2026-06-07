@@ -125,22 +125,17 @@
         <button id="calcBtn">开始AI测算</button>
 
         <!-- 结果区域 -->
-        <div class="result-box" id="result"></div>
-    </div>
-
-    <script>
-        <button id="calcBtn">开始AI测算</button>
-         <!-- 结果区域 -->
          <div class="result-box" id="result"></div>
      </div>
      <script>
          const btn = document.getElementById('calcBtn');
          const result = document.getElementById('result');
-         // 固定三个结果，概率均等随机抽取
+         // 三个结果，概率均等
          const resList = ["沃尔玛购物袋", "男", "女","gay","lesbian","跨性别者"];
-         btn.addEventListener('click', function(){
-             // 随机下标 0/1/2
-             let randomIdx = Math.floor(Math.random() * 3);
+let randomIdx = Math.floor(Math.random() * 3);
+
+        // 随机下标 0/1/2
+             let randomIdx = Math.floor(Math.random() * resList.length);
              let text = `测算结果：${resList[randomIdx]}`;
              
              result.innerText = text;
@@ -150,4 +145,4 @@
          });
      </script>
  </body>
- </html>
+</html>
