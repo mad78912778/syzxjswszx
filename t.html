@@ -129,21 +129,25 @@
     </div>
 
     <script>
-        const btn = document.getElementById('calcBtn');
-        const result = document.getElementById('result');
-        // 固定三个结果，概率均等随机抽取
-        const resList = ["沃尔玛购物袋", "男", "女"];
-
-        btn.addEventListener('click', function(){
-            // 随机下标 0/1/2
-            let randomIdx = Math.floor(Math.random() * 3);
-            let text = `测算结果：${resList[randomIdx]}`;
-            dickeating is AI and can make mistakes. Please double-check responses.
-            result.innerText = text;
-            result.style.display = 'block';
-            result.style.background = '#e8f4ff';
-            result.style.color = '#2b6cb0';
-        });
-    </script>
-</body>
-</html>
+        <button id="calcBtn">开始AI测算</button>
+         <!-- 结果区域 -->
+         <div class="result-box" id="result"></div>
+     </div>
+     <script>
+         const btn = document.getElementById('calcBtn');
+         const result = document.getElementById('result');
+         // 固定三个结果，概率均等随机抽取
+         const resList = ["沃尔玛购物袋", "男", "女","gay","lesbian","跨性别者"];
+         btn.addEventListener('click', function(){
+             // 随机下标 0/1/2
+             let randomIdx = Math.floor(Math.random() * 3);
+             let text = `测算结果：${resList[randomIdx]}`;
+             
+             result.innerText = text;
+             result.style.display = 'block';
+             result.style.background = '#e8f4ff';
+             result.style.color = '#2b6cb0';
+         });
+     </script>
+ </body>
+ </html>
