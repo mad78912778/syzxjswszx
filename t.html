@@ -121,23 +121,26 @@
             <div class="option"><input type="radio" name="q6"> 小狗</div>
             <div class="option"><input type="radio" name="q6"> 都不喜欢</div>
         </div>
-
-        <button id="calcBtn">开始AI测算</button>
-
-        <!-- 结果区域 -->
+<!-- 按钮 -->
+         <button id="calcBtn">开始AI测算</button>
+         <!-- 结果区域 -->
          <div class="result-box" id="result"></div>
      </div>
+     <!-- JS 代码（必须放在body最后） -->
      <script>
+         // 1. 获取元素（这里是关键，确保JS能找到按钮和结果框）
          const btn = document.getElementById('calcBtn');
          const result = document.getElementById('result');
-         // 三个结果，概率均等
+         // 2. 定义所有结果（你要的三个，概率均等）
          const resList = ["沃尔玛购物袋", "男", "女","gay","lesbian","跨性别者"];
 let randomIdx = Math.floor(Math.random() * 3);
 
-        // 随机下标 0/1/2
-             let randomIdx = Math.floor(Math.random() * resList.length);
-             let text = `测算结果：${resList[randomIdx]}`;
-             
+         // 3. 给按钮绑定点击事件
+         btn.addEventListener('click', function() {
+             // 随机取一个结果（和数组长度匹配，三个结果就取0/1/2）
+             const randomIdx = Math.floor(Math.random() * resList.length);
+             const text = `测算结果：${resList[randomIdx]}`;
+             // 4. 显示结果
              result.innerText = text;
              result.style.display = 'block';
              result.style.background = '#e8f4ff';
