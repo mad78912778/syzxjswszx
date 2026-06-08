@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>使用dickeating ofucks 1.0测母亲性别</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Microsoft Yahei", sans-serif;
+        }
+        body {
+            background: #f5f7fa;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 25px;
+            font-size: 22px;
+        }
+        .question {
+            margin: 20px 0;
+            padding: 15px;
+            background: #f8f9fa;
+            border-radius: 8px;
+        }
+        .q-title {
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #444;
+        }
+        .option {
+            margin: 8px 0;
+            cursor: pointer;
+        }
+        button {
+            display: block;
+            width: 100%;
+            padding: 14px;
+            background: #409eff;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 30px;
+            transition: background 0.2s;
+        }
+        button:hover {
+            background: #337ecc;
+        }
+        .result-box {
+            margin-top: 25px;
+            padding: 20px;
+            text-align: center;
+            font-size: 20px;
+            font-weight: bold;
+            border-radius: 8px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>dickeating ofucks 1.0测算 母亲性别</h1>
+        <p style="text-align:center;color:#666;margin-bottom:20px;">dickeating is AI and can make mistakes. Please double-check responses.</p>
+
+        <!-- 一堆无关趣味问题 -->
+        <div class="question">
+            <div class="q-title">1. 你今天早餐吃了什么？</div>
+            <div class="option"><input type="radio" name="q1" checked> 包子馒头</div>
+            <div class="option"><input type="radio" name="q1"> 牛奶（sperm)</div>
+            <div class="option"><input type="radio" name="q1"> dick</div>
+            <div class="option"><input type="radio" name="q1"> shit</div>
+        </div>
+
+        <div class="question">
+            <div class="q-title">2. 你更喜欢什么颜色？</div>
+            <div class="option"><input type="radio" name="q2" checked> 蓝色</div>
+            <div class="option"><input type="radio" name="q2"> 红色</div>
+            <div class="option"><input type="radio" name="q2"> 白色</div>
+            <div class="option"><input type="radio" name="q2"> “黄色”</div>
+        </div>
+
+        <div class="question">
+            <div class="q-title">3. 平时几点睡觉？</div>
+            <div class="option"><input type="radio" name="q3" checked> 21点前</div>
+            <div class="option"><input type="radio" name="q3"> 22-23点</div>
+            <div class="option"><input type="radio" name="q3"> 凌晨之后（张雪峰牢尸。。。）</div>
+        </div>
+
+        <div class="question">
+            <div class="q-title">4. 喜欢男同还是女同？</div>
+            <div class="option"><input type="radio" name="q4" checked> 男同</div>
+            <div class="option"><input type="radio" name="q4"> 女同</div>
+            <div class="option"><input type="radio" name="q4"> 都无所谓</div>
+        </div>
+
+        <div class="question">
+            <div class="q-title">5. 周末一般做什么？</div>
+            <div class="option"><input type="radio" name="q5" checked> 出门玩耍</div>
+            <div class="option"><input type="radio" name="q5"> 宅家起飞</div>
+            <div class="option"><input type="radio" name="q5"> 宅家挖矿</div>
+        </div>
+
+        <div class="question">
+            <div class="q-title">6. 你喜欢猫还是狗？</div>
+            <div class="option"><input type="radio" name="q6" checked> 猫咪</div>
+            <div class="option"><input type="radio" name="q6"> 小狗</div>
+            <div class="option"><input type="radio" name="q6"> 都不喜欢</div>
+        </div>
+<!-- 按钮 -->
+         <button id="calcBtn">开始AI测算</button>
+         <!-- 结果区域 -->
+         <div class="result-box" id="result"></div>
+     </div>
+     <!-- JS 代码（必须放在body最后） -->
+     <script>
+         // 1. 获取元素（这里是关键，确保JS能找到按钮和结果框）
+         const btn = document.getElementById('calcBtn');
+         const result = document.getElementById('result');
+         // 2. 定义所有结果（你要的三个，概率均等）
+         const resList = ["沃尔玛购物袋", "男", "女","男（gay）","女（lesbian）","跨性别者"];
+let randomIdx = Math.floor(Math.random() * 3);
+
+         // 3. 给按钮绑定点击事件
+         btn.addEventListener('click', function() {
+             // 随机取一个结果（和数组长度匹配，三个结果就取0/1/2）
+             const randomIdx = Math.floor(Math.random() * resList.length);
+             const text = `测算结果：${resList[randomIdx]}`;
+             // 4. 显示结果
+             result.innerText = text;
+             result.style.display = 'block';
+             result.style.background = '#e8f4ff';
+             result.style.color = '#2b6cb0';
+         });
+     </script>
+ </body>
+</html>
